@@ -5,8 +5,8 @@
 int main(int argc, char *argv[]) {
 	
 	// for test proporse
-	int list[] = {0, 1, 4, 5, 7, 8, 9, 10, 21, 24, 28, 33, 34, 51, 70};	
-	unsigned int find = 33;
+	int list[] = {-10, -7, -3, -1, 0, 1, 4, 5, 7, 8, 9, 10, 21, 24, 28, 33, 34, 51, 70};	
+	int find = -7;
 	unsigned int result;
 	
 	result = binary_search_array(list, sizeof(list) / sizeof(int), find);
