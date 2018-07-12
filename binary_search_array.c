@@ -15,14 +15,14 @@
  * @param unsigned int find
  * @return unsigned int
 */
-unsigned int binary_search_array(int list[], size_t len, unsigned int find){
+unsigned int binary_search_array(int list[], size_t len, int find){
 	
 	unsigned int start = 0;
 	unsigned int end = len - 1;
-	unsigned int pos;
+	unsigned int pos = (start + end) / 2;
 	
-	while(start <= end){
-		pos = (start + end) / 2;
+	while(start <= end && pos >= 0 && pos <= (len -1)){
+		
 		if(list[pos] == find){
 			return pos;
 		}else{
@@ -32,6 +32,7 @@ unsigned int binary_search_array(int list[], size_t len, unsigned int find){
 				start = pos + 1;
 			}
 		}
+		pos = (start + end) / 2;
 	}
 	// if not found
 	return -1;
